@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?><xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ue="http://uisrael.edu.ec/servicios" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" targetNamespace="http://uisrael.edu.ec/servicios">
+    <xsd:include schemaLocation="GenericSOAP.xsd"/>
+
+    <xsd:element name="ConsultarPuntos">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element maxOccurs="1" minOccurs="1" name="headerIn" type="ue:GenericHeaderIn"/>
+                <xsd:element maxOccurs="1" minOccurs="1" name="bodyIn" type="ue:bodyInputContainer"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="ConsultarPuntosResponse">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element maxOccurs="1" minOccurs="1" name="headerOut" type="ue:GenericHeaderOut"/>
+                <xsd:element maxOccurs="1" minOccurs="0" name="bodyOut" type="ue:bodyOutputContainer">
+                </xsd:element>
+                <xsd:element maxOccurs="1" minOccurs="1" name="error" type="ue:GenericError"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:complexType name="bodyOutputContainer">
+        <xsd:sequence>
+            <xsd:element maxOccurs="1" minOccurs="1" name="puntos" type="ue:PuntosOutputContainer">
+            </xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:complexType name="PuntosOutputContainer">
+        <xsd:sequence>
+
+
+
+            <xsd:element maxOccurs="unbounded" minOccurs="0" name="punto" type="ue:puntoData">
+            </xsd:element>
+
+        </xsd:sequence>
+    </xsd:complexType>
+
+
+
+
+
+
+
+
+
+
+    <xsd:complexType name="puntoData">
+        <xsd:sequence>
+            <xsd:element maxOccurs="1" minOccurs="1" name="serial_id" type="xsd:string">
+            </xsd:element>
+            <xsd:element maxOccurs="1" minOccurs="1" name="latitud" type="xsd:string">
+            </xsd:element>
+            <xsd:element maxOccurs="1" minOccurs="1" name="longitud" type="xsd:string">
+            </xsd:element>
+            <xsd:element maxOccurs="1" minOccurs="1" name="ubicacion" type="xsd:string">
+            </xsd:element>
+
+        </xsd:sequence>
+    </xsd:complexType>
+
+
+    <xsd:complexType name="bodyInputContainer">
+        <xsd:sequence>
+            <xsd:element maxOccurs="1" minOccurs="1" name="puntoSuperior" type="ue:puntoXContainer"/>
+            <xsd:element maxOccurs="1" minOccurs="1" name="puntoInferior" type="ue:puntoYContainer"/>
+        </xsd:sequence>
+    </xsd:complexType>
+
+
+    <xsd:complexType name="puntoInputContainer">
+        <xsd:sequence>
+            <xsd:element maxOccurs="1" minOccurs="1" name="pntoX" type="xsd:string"/>
+            <xsd:element maxOccurs="1" minOccurs="1" name="pntoY" type="xsd:string"/>
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:complexType name="puntoXContainer">
+        <xsd:sequence>
+            <xsd:element maxOccurs="1" minOccurs="1" name="punto" type="ue:puntoInputContainer"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="puntoYContainer">
+        <xsd:sequence>
+            <xsd:element maxOccurs="1" minOccurs="1" name="punto" type="ue:puntoInputContainer"/>
+        </xsd:sequence>
+    </xsd:complexType>
+</xsd:schema>

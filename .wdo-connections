@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<connections:connections xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:connections="http://www.ibm.com/websphere/wdo/connections">
+  <connection id="SQL Server 2008">
+    <development xsi:type="connections:rsc-live-connection" id="SQL Server 2008_dev" name="SQL Server 2008"/>
+    <runtime xsi:type="connections:driver-manager-connection" auto-deploy="true" class-location="C:\CWorkSpaceLocalizacion\WSLocalizacion0002\lib\sqljdbc41.jar" id="SQL Server 2008_runtime" class-name="com.microsoft.sqlserver.jdbc.SQLServerDriver" url="jdbc:sqlserver://192.168.150.53\MSSQLSERVER2008;databaseName=avdata" userid="usr_avdata"/>
+  </connection>
+</connections:connections>

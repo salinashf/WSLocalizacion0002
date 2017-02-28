@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="WSLocalizacion0002" targetNamespace="http://uisrael.edu.ec/servicios" xmlns:ue="http://uisrael.edu.ec/servicios" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://uisrael.edu.ec/servicios">
+    <xsd:include schemaLocation="WSLocalizacion_Schema.xsd"/>
+
+
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ConsultarPuntosResponse">
+    <wsdl:part name="parameters" element="ue:ConsultarPuntosResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="ConsultarPuntosRequest">
+    <wsdl:part name="parameters" element="ue:ConsultarPuntos">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="WSLocalizacion0002">
+    <wsdl:operation name="ConsultarPuntos">
+      <wsdl:input message="ue:ConsultarPuntosRequest">
+    </wsdl:input>
+      <wsdl:output message="ue:ConsultarPuntosResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WSLocalizacion0002SOAP" type="ue:WSLocalizacion0002">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="ConsultarPuntos">
+      <soap:operation soapAction="http://uisrael.edu.ec/servicios/ConsultarPuntos"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WSLocalizacion0002">
+    <wsdl:port name="WSLocalizacion0002SOAP" binding="ue:WSLocalizacion0002SOAP">
+      <soap:address location="http://localhost/WSLocalizacion0002/services/WSLocalizacion0002SOAP"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

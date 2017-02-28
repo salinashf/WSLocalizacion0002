@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?><xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:ue="http://uisrael.edu.ec/servicios" targetNamespace="http://uisrael.edu.ec/servicios">
+
+
+    <xsd:complexType name="GenericHeaderIn">
+        <xsd:sequence>
+            <xsd:element maxOccurs="1" minOccurs="0" name="dispositivo" type="xsd:string">
+            </xsd:element>
+            <xsd:element maxOccurs="1" minOccurs="0" name="canal" type="xsd:string">
+            </xsd:element>
+            <xsd:element maxOccurs="1" minOccurs="0" name="medio" type="xsd:string">
+            </xsd:element>
+            <xsd:element maxOccurs="1" minOccurs="1" name="aplicacion" type="xsd:string">
+            </xsd:element>
+            <xsd:element maxOccurs="1" minOccurs="1" name="usuario" type="xsd:string">
+            </xsd:element>
+            <xsd:element maxOccurs="1" minOccurs="1" name="fechaHora" type="xsd:string">
+            </xsd:element>
+            <xsd:element maxOccurs="1" minOccurs="1" name="idioma" type="xsd:string">
+            </xsd:element>
+            <xsd:element maxOccurs="1" minOccurs="0" name="ip" type="xsd:string">
+            </xsd:element>				
+        </xsd:sequence>
+    </xsd:complexType>
+    
+    <xsd:complexType name="GenericHeaderOut">
+        <xsd:sequence>
+            <xsd:element maxOccurs="1" minOccurs="0" name="dispositivo" type="xsd:string">
+            </xsd:element>
+			
+            <xsd:element maxOccurs="1" minOccurs="0" name="canal" type="xsd:string">
+            </xsd:element>
+			
+            <xsd:element maxOccurs="1" minOccurs="0" name="medio" type="xsd:string">
+            </xsd:element>
+            <xsd:element maxOccurs="1" minOccurs="1" name="aplicacion" type="xsd:string">
+            </xsd:element>
+            <xsd:element maxOccurs="1" minOccurs="1" name="usuario" type="xsd:string">
+            </xsd:element>
+            <xsd:element maxOccurs="1" minOccurs="1" name="fechaHora" type="xsd:string">
+            </xsd:element>
+    		
+            <xsd:element maxOccurs="1" minOccurs="1" name="idioma" type="xsd:string">
+            </xsd:element>
+            <xsd:element maxOccurs="1" minOccurs="0" name="ip" type="xsd:string">
+            </xsd:element>			
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:complexType name="GenericError">
+        <xsd:sequence>
+            <xsd:element maxOccurs="1" minOccurs="1" name="codigo" type="xsd:string">
+            </xsd:element>
+            <xsd:element maxOccurs="1" minOccurs="1" name="mensaje" type="xsd:string">
+            </xsd:element>
+            <xsd:element maxOccurs="1" minOccurs="1" name="tipo" type="xsd:string">
+            </xsd:element>
+            <xsd:element maxOccurs="1" minOccurs="1" name="recurso" type="xsd:string">
+            </xsd:element>
+            <xsd:element maxOccurs="1" minOccurs="1" name="componente" type="xsd:string"/>
+        </xsd:sequence>
+    </xsd:complexType>
+</xsd:schema>
