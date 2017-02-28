@@ -1,5 +1,13 @@
 
 package ec.edu.uisrael.datos;
+/**
+ * (c) 2017 Salinas Henry  
+ * (c) 2017 in House
+ * 
+ * @author Salinas Henry  
+ * @since 13:46:22 - 14.09.2010
+ */
+
 public class Punto {
 
     public Punto(String siteid, String sitename, String latitude, String longitude) {

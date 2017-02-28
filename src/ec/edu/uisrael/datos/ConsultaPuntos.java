@@ -1,4 +1,11 @@
 package ec.edu.uisrael.datos;
+/**
+ * (c) 2017 Salinas Henry  
+ * (c) 2017 in House
+ * 
+ * @author Salinas Henry  
+ * @since 13:46:22 - 14.09.2010
+ */
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

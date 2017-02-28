@@ -1,4 +1,11 @@
 package ec.edu.uisrael.servicios;
+/**
+ * (c) 2017 Salinas Henry  
+ * (c) 2017 in House
+ * 
+ * @author Salinas Henry  
+ * @since 13:46:22 - 14.09.2017
+ */
 
 import javax.jws.WebMethod;
 import javax.jws.WebParam;

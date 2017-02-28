@@ -1,14 +1,15 @@
 package ec.edu.uisrael.servicios;
-
+/**
+ * (c) 2017 Salinas Henry  
+ * (c) 2017 in House
+ * 
+ * @author Salinas Henry  
+ * @since 13:46:22 - 14.09.2017
+ */
 
 import java.util.Calendar;
-
 import javax.xml.ws.Holder;
-
 import org.joda.time.DateTime;
-
-
-
 public abstract class WSManager implements WSLocalizacion0002 {
 	private GenericHeaderOut headerOutValue = new GenericHeaderOut();
 	private GenericError errorValue = new GenericError();
